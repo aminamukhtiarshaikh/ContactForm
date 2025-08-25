@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Creative Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-wrapper">
+        <div class="contact-decoration">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+            <div class="decoration-text">
+                <span>Let's</span>
+                <span>Create</span>
+                <span>Something</span>
+                <span>Amazing</span>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <div class="form-header">
+                <h1>Get in Touch</h1>
+                <p class="subtitle">We collaborate with ambitious brands and people. Let's build something great together.</p>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group double">
+                    <div class="input-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select service</option>
+                        <option value="web">Web Development</option>
+                        <option value="branding">Branding</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="design">UI/UX Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-message" id="serviceError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Project Budget (USD)</label>
+                    <div class="budget-range">
+                        <span>$1k</span>
+                        <input type="range" id="budget" name="budget" min="1000" max="50000" step="1000" value="10000">
+                        <span>$50k+</span>
+                        <div class="budget-value">$10,000</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Project</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <span class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                    <p class="form-note">We'll get back to you within 24 hours</p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="notification" id="notification"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
